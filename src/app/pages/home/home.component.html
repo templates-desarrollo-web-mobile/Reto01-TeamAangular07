@@ -1,0 +1,17 @@
+<div class="d-flex" id="wrapper">
+    <app-sidenav (updateDataEvent)="updateData($event)"></app-sidenav>
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center  mt-5" *ngIf="typePokemon!=null">{{typePokemon}}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" *ngFor="let item of pokemons" style="padding: 1em !important">
+                    <app-card [dataCard]="item"></app-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
